@@ -15,6 +15,8 @@ const API_URL = 'https://api-tuboleto.cultura.pe/recaudador/venta/getConsultaCup
 const USERNAME = 'happygringotours@gmail.com';
 const PASSWORD = '///GRINGO1987';
 
+const PORT = process.env.PORT || 5000;
+
 // Configuración para ignorar la verificación del certificado SSL
 const httpsAgent = new https.Agent({ rejectUnauthorized: false });
 
@@ -72,7 +74,7 @@ app.post('/api/disponibilidad', async (req, res) => {
     }
 });
 
-// Iniciar el servidor en el puerto 5000
-app.listen(5000, () => {
-    console.log('Servidor corriendo en http://localhost:5000');
+// Iniciar el servidor en el puerto especificado
+app.listen(PORT, () => {
+    console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
