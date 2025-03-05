@@ -5,7 +5,23 @@ const https = require('https');
 
 const app = express();
 app.use(express.json()); // Permite leer JSON en las solicitudes
-app.use(cors()); // Habilita CORS para peticiones desde el frontend
+
+// 🔴 Lista de dominios permitidos (modifica con tus dominios)
+const allowedOrigins = [
+    "https://ecotourcusco.com",
+    "https://bigfootmachupicchu.com"
+];
+
+// Configuración de CORS para permitir solo ciertos dominios
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("🚫 Acceso no permitido desde este dominio"));
+        }
+    }
+}));
 
 // URLs de la API
 const AUTH_URL = 'https://api-tuboleto.cultura.pe/auth/user/login';
