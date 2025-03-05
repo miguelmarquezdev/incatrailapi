@@ -9,7 +9,13 @@ app.use(express.json()); // Permite leer JSON en las solicitudes
 // 🔴 Lista de dominios permitidos (modifica con tus dominios)
 const allowedOrigins = [
     "https://ecotourcusco.com",
-    "https://bigfootmachupicchu.com"
+    "https://bigfootmachupicchu.com",
+    "https://sapadventures.org",
+    "https:/happygringotours.com",
+    "https://machupicchutickets.net",
+    "https://enjoyperu.org",
+    "https://incavalleyperu.com",
+    "https://machupicchu-andean.com"
 ];
 
 // Configuración de CORS para permitir solo ciertos dominios
