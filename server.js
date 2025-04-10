@@ -15,7 +15,8 @@ const allowedOrigins = [
     "https://machupicchutickets.net",
     "https://enjoyperu.org",
     "https://incavalleyperu.com",
-    "https://machupicchu-andean.com"
+    "https://machupicchu-andean.com",
+    "https://www.cusco-explore.com"
 ];
 
 // Configuración de CORS para permitir solo ciertos dominios
