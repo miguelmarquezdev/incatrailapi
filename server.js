@@ -16,7 +16,8 @@ const allowedOrigins = [
     "https://enjoyperu.org",
     "https://incavalleyperu.com",
     "https://machupicchu-andean.com",
-    "https://www.cusco-explore.com"
+    "https://www.cusco-explore.com",
+    "https://lostinperu.com"
 ];
 
 // Configuración de CORS para permitir solo ciertos dominios
